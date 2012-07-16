@@ -13,13 +13,7 @@ require 'getoptlong'
 
 # reads a HAR file
 def read_har(fname)
-  begin
     JSON.parse File.read(fname)
-  rescue Exception => e
-    p e.message
-    p e.backtrace
-    exit
-  end
 end
 
 
@@ -121,8 +115,13 @@ files = Dir.glob "#{dir}/*har"
 files.each do |f|
 
   p "processing #{f}"
-  process_har(db, f)
-  
+  begin
+    process_har(db, f)
+  rescue Exception => e
+    p e.message
+    p e.backtrace
+    next
+  end
 end
 
   
