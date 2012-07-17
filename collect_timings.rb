@@ -8,7 +8,7 @@
 sites = ["www.google.com", "www.hs.fi", "www.yle.fi", "blog.flickr.net/en", "en.wikipedia.org/wiki/Main_Page", "www.amazon.com", "www.ebay.com", "www.youtube.com", "www.imdb.com", "www.bbc.co.uk/news"]
 
 # time between visits (in s)
-interval = 2
+interval = 600
 
 # overall period (every ten mintes, for 3 days)
 timeout = interval * 6 * 24 * 3
@@ -19,7 +19,7 @@ while timeout > 0
 
   sites.each do |s|
     out_name = Dir.pwd + "/out/" + s.gsub(/[^A-z]/,'_') + "-" +Time.now.to_s + ".har"
-    system "echo osascript Pagestats.scpt \"http://#{s}\" \"#{out_name}\""
+    system "osascript Pagestats.scpt \"http://#{s}\" \"#{out_name}\""
   end
   
   sleep interval
