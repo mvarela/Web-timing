@@ -11,7 +11,7 @@ sites = ["www.google.com", "www.yle.fi", "blog.flickr.net/en", "en.wikipedia.org
 interval = 600
 
 # overall period (every ten mintes, for 3 days)
-timeout = interval * 6 * 24 #* 3
+timeout = interval * 6 * 24 * 3
 
 # Do our stuff
 
