@@ -1,0 +1,7 @@
+   starttime        duration           size            total     
+ Min.   :    0   Min.   :   1.0   Min.   :     0   Min.   :2013  
+ 1st Qu.:  942   1st Qu.:   1.0   1st Qu.:     0   1st Qu.:2013  
+ Median : 1509   Median :   8.0   Median :    65   Median :2020  
+ Mean   : 2208   Mean   : 345.5   Mean   : 22474   Mean   :2357  
+ 3rd Qu.: 2818   3rd Qu.: 242.0   3rd Qu.:  1789   3rd Qu.:2254  
+ Max.   :10695   Max.   :3646.0   Max.   :177601   Max.   :5658  

@@ -1,0 +1,7 @@
+   starttime       duration           size            total     
+ Min.   : 606   Min.   :   2.0   Min.   : 44059   Min.   :2014  
+ 1st Qu.: 868   1st Qu.:  35.0   1st Qu.: 44059   1st Qu.:2047  
+ Median :1001   Median :  73.0   Median : 54950   Median :2085  
+ Mean   :1151   Mean   : 383.4   Mean   :171794   Mean   :2395  
+ 3rd Qu.:1224   3rd Qu.: 134.0   3rd Qu.:416901   3rd Qu.:2146  
+ Max.   :4490   Max.   :3006.0   Max.   :416901   Max.   :5018  
