@@ -1,7 +1,7 @@
-   starttime        duration           size            total     
- Min.   :  287   Min.   :   2.0   Min.   :   213   Min.   :2014  
- 1st Qu.:  511   1st Qu.:  55.0   1st Qu.:   924   1st Qu.:2067  
- Median : 1138   Median : 130.0   Median :  3768   Median :2142  
- Mean   : 2034   Mean   : 302.1   Mean   : 26094   Mean   :2314  
- 3rd Qu.: 3203   3rd Qu.: 282.0   3rd Qu.: 36596   3rd Qu.:2294  
- Max.   :17580   Max.   :4516.0   Max.   :242078   Max.   :6528  
+   starttime        duration           size            total      
+ Min.   :  287   Min.   :   2.0   Min.   :   213   Min.   :  345  
+ 1st Qu.:  511   1st Qu.:  55.0   1st Qu.:   924   1st Qu.:  725  
+ Median : 1138   Median : 130.0   Median :  3768   Median : 1485  
+ Mean   : 2034   Mean   : 302.1   Mean   : 26094   Mean   : 2336  
+ 3rd Qu.: 3203   3rd Qu.: 282.0   3rd Qu.: 36596   3rd Qu.: 3513  
+ Max.   :17580   Max.   :4516.0   Max.   :242078   Max.   :17602  

@@ -39,10 +39,10 @@ def inject_R(file, prefix ,suffix)
   sink()
 eos
 
-  cols = ["starttime", "duration", "size"]
+  cols = ["starttime", "duration", "size", "total"]
   cols.each do |c|
    res+= <<-eos2
-      s_hist <- hist(a$#{c})
+      s_hist <- hist(a$#{c}, breaks=50)
       data_out <- cbind(s_hist$breaks[-length(s_hist$breaks)],s_hist$counts)
       write.table(data_out, file="#{prefix}-#{c}_hist-#{suffix}", row.names=F, col.names=F, sep='\\t')
 eos2
@@ -89,7 +89,7 @@ urls.each do |u|
   mimetypes.each do |m|
     filename = "#{m}_stats-#{suffix}" 
     sql_out.printf ".output 'stats/#{filename}'\n"
-    sql_out.printf "select (r.starttimeoffset*1000) as starttime, r.duration, r.size from measurements as m join requests as r on m.archivename = r.mid where starttime >= 0 and duration >= 0 and m.url like '%%#{url}%%' and mimetype like '%%#{m}%%';\n"
+    sql_out.printf "select (r.starttimeoffset*1000) as starttime, r.duration, r.size, (( r.starttimeoffset*1000 ) +r.duration) as total from measurements as m join requests as r on m.archivename = r.mid where starttime >= 0 and duration >= 0 and m.url like '%%#{url}%%' and mimetype like '%%#{m}%%' ;\n"
 
     # Add relevant R commands for processing
     r_out.printf("%s\n", inject_R(filename, m, suffix))
